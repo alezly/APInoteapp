@@ -13,11 +13,11 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req,res) => {
-    res.send('Backend con NodeJS - Express + CRUD API REST + MySQL');
+    res.send('Super API');
 });
 
 routerApi(app);
 
 app.listen(port,()=>{
-    console.log("Port ==> ", port);
+    console.log("Listening in port: ", port);
 });

@@ -1,7 +1,7 @@
-const { Person, PersonSchema } = require('./notes_model');
+const { Notes, NotesSchema } = require('./notes_model');
 
 function setupModels(sequelize) {
-    Person.init(PersonSchema, Person.config(sequelize));
+    Notes.init(NotesSchema, Notes.config(sequelize));
 }
 
 module.exports = setupModels;

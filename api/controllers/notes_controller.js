@@ -1,6 +1,6 @@
 // Se encargar de consultar servicios y retornar los datos a la API
-const PersonsService = require('../services/notes_services');
-const service = new PersonsService();
+const NotesService = require('../services/notes_services');
+const service = new NotesService();
 
 const create = async ( req, res ) => {
     try { 

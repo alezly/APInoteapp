@@ -1,19 +1,19 @@
 const { Model, DataTypes, Sequelize } = require('sequelize');
 
-const PERSON_TABLE = 'persons';
+const GENERAL_NOTES = 'Notes';
 
-class Person extends Model {
+class Notes extends Model {
     static config(sequelize) {
         return {
             sequelize,
-            tableName: PERSON_TABLE,
-            modelName: 'Person',
+            tableName: GENERAL_NOTES,
+            modelName: 'Notes',
             timestamps: true
         }
     }
 } 
 
-const PersonSchema = {
+const NotesSchema = {
     id: {
         allowNull: false,
         autoIncrement: true,
@@ -37,4 +37,4 @@ const PersonSchema = {
     } 
 }
   
-module.exports = { Person, PersonSchema };
+module.exports = { Notes, NotesSchema };
