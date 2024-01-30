@@ -1,8 +1,7 @@
 const { Sequelize } = require('sequelize');
-
-const  { config } = require('../config/config');
+const { config } = require('../config/config');
 const setupModels = require('./../db/models');
-  
+
 const sequelize = new Sequelize(
     config.dbName, // name database
     config.dbUser, // user database
@@ -11,9 +10,8 @@ const sequelize = new Sequelize(
       host: config.dbHost,
       dialect: 'mysql' 
     }
-  );
+);
 
-sequelize.sync();
 setupModels(sequelize);
 
 module.exports = sequelize;

@@ -1,22 +1,22 @@
 // Aqui va la logica 
 const { models } = require('../libs/sequelize');
 
-class PersonsService { 
+class NotesService { 
   
     constructor() {}
 
     async find() {
-      const res = await models.Person.findAll();
+      const res = await models.Notes.findAll();
       return res;
     }
 
     async findOne(id) {
-      const res = await models.Person.findByPk(id);
+      const res = await models.Notes.findByPk(id);
       return res;
     }
 
     async create(data) {
-      const res = await models.Person.create(data);
+      const res = await models.Notes.create(data);
       return res;
     }
 
@@ -34,4 +34,4 @@ class PersonsService {
   
   }
   
-  module.exports = PersonsService;
+  module.exports = NotesService;
